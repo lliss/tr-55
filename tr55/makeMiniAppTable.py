@@ -27,18 +27,18 @@ with open(csv_file_name, 'wb') as csv_file:
     # turf grass, pasture, row crops. The closest matching to the values in
     # this implementation of TR-55 are the following:
     land_uses = [
-        'li_residential',
-        'hi_residential',
-        'commercial',
-        'grassland',
+        'open_water',
+        'developed_open',
+        'developed_low',
+        'developed_med',
+        'developed_high',
+        'barren_land',
         'deciduous_forest',
-        'urban_grass',
+        'shrub',
+        'grassland',
         'pasture',
-        'row_crop',
-        'chaparral',
-        'tall_grass_prairie',
-        'short_grass_prairie',
-        'desert'
+        'cultivated_crops',
+        'woody_wetlands'
     ]
 
     soil_types = ['a', 'b', 'c', 'd']
