@@ -25,7 +25,7 @@ class TestTablelookups(unittest.TestCase):
         self.assertEqual(lookup_pet(104, 'green_roof')[1], 0.0)
         self.assertEqual(lookup_pet(156, 'cluster_housing')[0], 0.23)
         self.assertEqual(lookup_pet(208, 'grassland')[0], 0.2)
-        self.assertEqual(lookup_pet(260, 'woody_wetland')[1], 0.207)
+        self.assertEqual(lookup_pet(260, 'woody_wetlands')[1], 0.207)
         self.assertEqual(lookup_pet(352, 'pasture')[1], 0.207 * 0.6)
 
     def test_lookup_bmp_infiltration(self):

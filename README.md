@@ -43,7 +43,7 @@ The `simulate_water_quality` function does a water quality calculation over an e
    {
        "cell_count": 8,
        "distribution": {
-           "c:commercial": {"cell_count": 5},
+           "c:developed_high": {"cell_count": 5},
            "a:deciduous_forest": {
                "cell_count": 3
                "distribution": {
@@ -56,7 +56,7 @@ The `simulate_water_quality` function does a water quality calculation over an e
    }
    ```
 
-   represents an area of interest that is eight cells in size, with five of those cells of type `"c:commercial"` (*commercial* land use on top of type *C* soil), and one cell each of *deciduous forest*, *no-till farming*, and *rock*.
+   represents an area of interest that is eight cells in size, with five of those cells of type `"c:developed_high"` (*developed_high* land use on top of type *C* soil), and one cell each of *deciduous forest*, *no-till farming*, and *rock*.
 
    The single cells of *deciduous forest*, *no-till*, and the *rock* are all underneath a node of three cells of type *deciduous forest*.  That indicates a land use modification has taken place: in this case, two of three original cells of *deciduous forest* have undergone modifications.
 
@@ -76,7 +76,7 @@ This function is used to simulate the effects of land use modifications.  The ar
    {
        "cell_count": 8,
        "distribution": {
-           "c:commercial": {"cell_count": 5},
+           "c:developed_high": {"cell_count": 5},
            "a:deciduous_forest": {"cell_count": 3}
        },
        "modifications": [
@@ -98,7 +98,7 @@ This function is used to simulate the effects of land use modifications.  The ar
    }
    ```
 
-   is the census that corresponds to the `tree` given in the discusson of `simulate_water_quality` above.  There is an area of interest eight cells in size, with five of type `"c:commercial"` and three of type `"a:deciduous_forest"`.
+   is the census that corresponds to the `tree` given in the discusson of `simulate_water_quality` above.  There is an area of interest eight cells in size, with five of type `"c:developed_high"` and three of type `"a:deciduous_forest"`.
 
    Modifications are given as an array of dictionaries.  Each dictionary contains a `change` key whose value encodes the modification that has taken place.  In the example above, `"::no_till"` indicates that the no-till farming BMP has been applied, while `"a:rock:"` means that that particular area has been reclassified as being mostl rocks sitting on top of A-type soil.
 
@@ -126,8 +126,8 @@ from tr55.model import simulate_year
 census = {
     "cell_count": 147,
     "distribution": {
-        "d:hi_residential": {"cell_count": 33},
-        "c:commercial": {"cell_count": 42},
+        "d:developed_med": {"cell_count": 33},
+        "c:developed_high": {"cell_count": 42},
         "a:deciduous_forest": {"cell_count": 72}
     },
     "modifications": [
@@ -135,8 +135,8 @@ census = {
             "change": "::no_till",
             "cell_count": 30,
             "distribution": {
-                "d:hi_residential": {"cell_count": 10},
-                "c:commercial": {"cell_count": 20}
+                "d:developed_med": {"cell_count": 10},
+                "c:developed_high": {"cell_count": 20}
             }
         },
         {
@@ -163,7 +163,7 @@ is partially reproduced here:
                                                         'tn': 0.0,
                                                         'tp': 0.0,
                                                         'tss': 0.0},
-                                 'c:commercial': {'bod': 1061.0138827829708,
+                                 'c:developed_high': {'bod': 1061.0138827829708,
                                                   'cell_count': 42,
                                                   'et': 2.272860000000005,
                                                   'inf': 4.430079770137537,
@@ -171,7 +171,7 @@ is partially reproduced here:
                                                   'tn': 7.786472849455671,
                                                   'tp': 1.2321451541995787,
                                                   'tss': 216.39549270630107},
-                                 'd:hi_residential': {'bod': 701.5416264041463,
+                                 'd:developed_med': {'bod': 701.5416264041463,
                                                       'cell_count': 33,
                                                       'et': 6.818579999999993,
                                                       'inf': 8.361629213022574,

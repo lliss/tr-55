@@ -135,7 +135,7 @@ def simulate_cell_day(precip, evaptrans, cell, cell_count):
         # intensity residential.
         inf = lookup_bmp_infiltration(soil_type, bmp)
         runoff = precip - (evaptrans + inf)
-        hi_res_cell = soil_type + ':hi_residential:'
+        hi_res_cell = soil_type + ':developed_med:'
         hi_res = simulate_cell_day(precip, evaptrans, hi_res_cell, 1)
         hir_run = hi_res['runoff-vol']
         hir_et = hi_res['et-vol']

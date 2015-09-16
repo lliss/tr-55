@@ -417,7 +417,7 @@ BMPS = set(['green_roof', 'porous_paving',
 BUILT_TYPES = set(['developed_open', 'developed_high', 'developed_med',
                    'developed_low', 'cluster_housing'])
 
-NON_NATURAL = set(['pasture', 'hay', 'row_crop', 'green_roof']) \
+NON_NATURAL = set(['pasture', 'cultivated_crops', 'green_roof']) \
     | set(['no_till']) | BMPS | BUILT_TYPES
 
 # The set of pollutants that we are concerned with.

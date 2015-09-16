@@ -23,7 +23,7 @@ with open(csv_file_name, 'wb') as csv_file:
     precips = [0.5, 1.0, 2.0, 3.2, 8.0]
 
     # The land uses in the original mini-app were low intensity
-    # residential, high intensity residential, commercial, grassland, forest,
+    # residential, high intensity residential, developed_high, grassland, forest,
     # turf grass, pasture, row crops. The closest matching to the values in
     # this implementation of TR-55 are the following:
     land_uses = [
